@@ -1,10 +1,10 @@
 FROM php:7.4-rc-fpm-alpine
 
-LABEL Organization="CTFTraining" Author="Virink <virink@outlook.com>"
+LABEL Organization="CTFHUB" Author="Virink <virink@outlook.com>"
 
 COPY _files /tmp/
 
-RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.ustc.edu.cn/g' /etc/apk/repositories \
+RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.aliyun.com/g' /etc/apk/repositories \
     && apk add --update --no-cache nginx \
     && mkdir /run/nginx \
     # configure file
